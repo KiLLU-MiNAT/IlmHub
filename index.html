@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IlmHub</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="nav">
+        <div class="container nav__inner">
+            <div class="brand">
+                <span style="width:36px;height:36px;border-radius:14px;display:inline-grid;place-items:center;
+                   background:linear-gradient(135deg, rgba(76,201,240,.25), rgba(124,77,255,.25));
+                   border:1px solid var(--border);">IH</span>
+                <div>
+                    <div>IlmHub</div>
+                    <div class="badge">Beiträge • Kurse • Lernblätter</div>
+                </div>
+            </div>
+
+            <div class="nav__links">
+                <a href="courses.html">Kurse</a>
+                <a href="posts.html">Beiträge</a>
+                <a href="worksheets.html">Lernblätter</a>
+                <a href="profile.html">Profil</a>
+            </div>
+
+            <div class="btnRow">
+                <span class="badge">👤 <span id="userLabel">Gast</span></span>
+                <button class="btn" id="btnLogin">Mit Google einloggen</button>
+                <button class="btn btn--ghost" id="btnLogout" style="display:none">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <div class="hero__inner">
+                <h1 class="h1">Lernen. Lesen. Verstehen.</h1>
+                <p class="p">
+                    IlmHub ist ein Hub für muslimische Inhalte: Bibel-Koran Themen, Propheten,
+                    Methodik und strukturierte Kurse. Dein Fortschritt und deine Lernblätter
+                    werden (nach Login) gespeichert.
+                </p>
+
+                <div class="btnRow">
+                    <a class="btn" href="courses.html">Kurse starten</a>
+                    <a class="btn btn--ghost" href="posts.html">Beiträge lesen</a>
+                    <a class="btn btn--ghost" href="worksheets.html">Lernblätter öffnen</a>
+                </div>
+
+                <div class="kpis">
+                    <div class="kpi">✅ Fortschritt pro Kurs</div>
+                    <div class="kpi">🧾 Lernblätter: speichern & wieder öffnen</div>
+                    <div class="kpi">✍️ Autoren-Beiträge</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionTitle">
+            <h2>Empfohlen</h2>
+            <div class="small">Beispiel-Inhalte</div>
+        </div>
+
+        <div class="grid grid--3" id="homeCourses"></div>
+
+        <div class="sectionTitle">
+            <h2>Neueste Beiträge</h2>
+            <div class="small">Wissen kompakt</div>
+        </div>
+
+        <div class="grid grid--3" id="homePosts"></div>
+
+        <div class="footer">© IlmHub • MVP</div>
+    </div>
+
+    <script type="module">
+        import { mountNav, renderHomeHighlights } from "./app.js";
+        mountNav();
+        renderHomeHighlights();
+    </script>
+</body>
+</html>

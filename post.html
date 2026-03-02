@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IlmHub • Beitrag</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="nav">
+        <div class="container nav__inner">
+            <div class="brand">
+                <span style="width:36px;height:36px;border-radius:14px;display:inline-grid;place-items:center;
+                   background:linear-gradient(135deg, rgba(76,201,240,.25), rgba(124,77,255,.25));
+                   border:1px solid var(--border);">IH</span>
+                <div>
+                    <div>IlmHub</div>
+                    <div class="badge">Beitrag</div>
+                </div>
+            </div>
+
+            <div class="nav__links">
+                <a href="posts.html">← Beiträge</a>
+                <a href="courses.html">Kurse</a>
+                <a href="worksheets.html">Lernblätter</a>
+                <a href="profile.html">Profil</a>
+            </div>
+
+            <div class="btnRow">
+                <span class="badge">👤 <span id="userLabel">Gast</span></span>
+                <button class="btn" id="btnLogin">Mit Google einloggen</button>
+                <button class="btn btn--ghost" id="btnLogout" style="display:none">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="postTitle" class="h1">Titel</h1>
+        <div class="small" id="postMeta"></div>
+        <div id="postTags" style="margin-top:10px"></div>
+
+        <hr class="sep" />
+
+        <div class="card" style="padding:18px">
+            <div id="postBody"></div>
+        </div>
+
+        <div class="footer">Später: Kommentare/Notizen pro User, Quellenliste, Lesezeichen.</div>
+    </div>
+
+    <script type="module">
+  import { mountNav, renderPostDetail } from "./app.js";
+  mountNav();
+  renderPostDetail();
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IlmHub • Beiträge</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="nav">
+        <div class="container nav__inner">
+            <div class="brand">
+                <span style="width:36px;height:36px;border-radius:14px;display:inline-grid;place-items:center;
+                   background:linear-gradient(135deg, rgba(76,201,240,.25), rgba(124,77,255,.25));
+                   border:1px solid var(--border);">IH</span>
+                <div>
+                    <div>IlmHub</div>
+                    <div class="badge">Beiträge</div>
+                </div>
+            </div>
+
+            <div class="nav__links">
+                <a href="index.html">Start</a>
+                <a href="courses.html">Kurse</a>
+                <a href="worksheets.html">Lernblätter</a>
+                <a href="profile.html">Profil</a>
+            </div>
+
+            <div class="btnRow">
+                <span class="badge">👤 <span id="userLabel">Gast</span></span>
+                <button class="btn" id="btnLogin">Mit Google einloggen</button>
+                <button class="btn btn--ghost" id="btnLogout" style="display:none">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sectionTitle">
+            <h2>Beiträge</h2>
+            <div class="small">Beispiel-Artikel (später aus Datenbank)</div>
+        </div>
+
+        <div class="grid grid--3" id="postsGrid"></div>
+
+        <div class="footer">Du kannst daraus später eine Autoren-Plattform machen (Roles: author/admin).</div>
+    </div>
+
+    <script type="module">
+  import { mountNav, renderPostsList } from "./app.js";
+  mountNav();
+  renderPostsList();
+    </script>
+</body>
+</html>

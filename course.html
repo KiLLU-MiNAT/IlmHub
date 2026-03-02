@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IlmHub • Kurs</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="nav">
+        <div class="container nav__inner">
+            <div class="brand">
+                <span style="width:36px;height:36px;border-radius:14px;display:inline-grid;place-items:center;
+                   background:linear-gradient(135deg, rgba(76,201,240,.25), rgba(124,77,255,.25));
+                   border:1px solid var(--border);">IH</span>
+                <div>
+                    <div>IlmHub</div>
+                    <div class="badge">Kurs</div>
+                </div>
+            </div>
+
+            <div class="nav__links">
+                <a href="courses.html">← Kurse</a>
+                <a href="posts.html">Beiträge</a>
+                <a href="worksheets.html">Lernblätter</a>
+                <a href="profile.html">Profil</a>
+            </div>
+
+            <div class="btnRow">
+                <span class="badge">👤 <span id="userLabel">Gast</span></span>
+                <button class="btn" id="btnLogin">Mit Google einloggen</button>
+                <button class="btn btn--ghost" id="btnLogout" style="display:none">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="courseTitle" class="h1">Kurs</h1>
+        <div class="small" id="courseMeta"></div>
+        <p class="p" id="courseDesc"></p>
+
+        <div class="btnRow" style="margin-top:10px">
+            <div class="progress"><div id="progBar"></div></div>
+            <span class="badge" id="progText">Fortschritt: 0%</span>
+            <button class="btn" id="bookBtn">Kurs buchen (Demo)</button>
+        </div>
+
+        <hr class="sep" />
+
+        <div id="lessonList" class="list"></div>
+
+        <div class="footer">Hinweis: Fortschritt wird nur gespeichert, wenn du eingeloggt bist.</div>
+    </div>
+
+    <script type="module">
+  import { mountNav, renderCourseDetail } from "./app.js";
+  mountNav();
+  renderCourseDetail();
+    </script>
+</body>
+</html>

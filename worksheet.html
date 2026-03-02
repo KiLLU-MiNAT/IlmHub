@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IlmHub • Lernblatt</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="nav">
+        <div class="container nav__inner">
+            <div class="brand">
+                <span style="width:36px;height:36px;border-radius:14px;display:inline-grid;place-items:center;
+                   background:linear-gradient(135deg, rgba(76,201,240,.25), rgba(124,77,255,.25));
+                   border:1px solid var(--border);">IH</span>
+                <div>
+                    <div>IlmHub</div>
+                    <div class="badge">Lernblatt</div>
+                </div>
+            </div>
+
+            <div class="nav__links">
+                <a href="worksheets.html">← Lernblätter</a>
+                <a href="courses.html">Kurse</a>
+                <a href="posts.html">Beiträge</a>
+                <a href="profile.html">Profil</a>
+            </div>
+
+            <div class="btnRow">
+                <span class="badge">👤 <span id="userLabel">Gast</span></span>
+                <button class="btn" id="btnLogin">Mit Google einloggen</button>
+                <button class="btn btn--ghost" id="btnLogout" style="display:none">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="wsTitle" class="h1">Lernblatt</h1>
+        <p class="p" id="wsIntro"></p>
+
+        <div class="badge" id="wsHint"></div>
+
+        <hr class="sep" />
+
+        <form id="wsForm" class="grid grid--2"></form>
+
+        <div class="btnRow" style="margin-top:14px">
+            <button type="button" class="btn" id="wsSave">Speichern</button>
+            <span class="badge" id="wsStatus"></span>
+        </div>
+
+        <div class="footer">Später: PDF-Export, Auto-Save, Kurs-Verknüpfungen.</div>
+    </div>
+
+    <script type="module">
+  import { mountNav, renderWorksheetDetail } from "./app.js";
+  mountNav();
+  renderWorksheetDetail();
+    </script>
+</body>
+</html>
